@@ -228,8 +228,20 @@
         flex-direction: column;
     }
 
+    .site-footer__nav,
+    .site-footer__social {
+        width: 100%;
+        justify-self: center;
+        margin-inline: auto;
+    }
+
+    .site-footer__nav {
+        align-items: center;
+    }
+
     .site-footer__social {
         justify-content: center;
+        align-items: center;
     }
 }
 
@@ -249,5 +261,10 @@
 
     .site-footer__link {
         width: 100%;
+    }
+
+    .site-footer__social {
+        justify-content: center;
+        align-items: center;
     }
 }
