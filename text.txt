@@ -1,0 +1,334 @@
+/* =====================================================
+   CATATAN CSS FLEXBOX RESPONSIVE WEBSITE
+   Cocok untuk: navbar, hero, section, card, footer
+   ===================================================== */
+
+
+/* =========================
+   1. RESET DASAR WEBSITE
+   ========================= */
+
+* {
+  margin: 0; /* Menghapus jarak bawaan semua elemen */
+  padding: 0; /* Menghapus padding bawaan semua elemen */
+  box-sizing: border-box; /* Agar ukuran elemen lebih mudah diatur */
+}
+
+body {
+  font-family: Arial, sans-serif; /* Mengatur jenis font website */
+  background-color: #f9fafb; /* Warna background website */
+  color: #111827; /* Warna teks utama */
+}
+
+img {
+  max-width: 100%; /* Gambar tidak keluar dari parent */
+  display: block; /* Menghilangkan jarak kecil bawaan gambar */
+}
+
+a {
+  text-decoration: none; /* Menghilangkan garis bawah link */
+  color: inherit; /* Warna link mengikuti parent */
+}
+
+
+/* =========================
+   2. CONTAINER WEBSITE
+   ========================= */
+
+.container {
+  width: 90%; /* Lebar isi website 90% dari layar */
+  max-width: 1200px; /* Batas maksimal agar tidak terlalu lebar */
+  margin: 0 auto; /* Membuat container ke tengah */
+}
+
+
+/* =========================
+   3. FLEX DASAR
+   ========================= */
+
+.flex {
+  display: flex; /* Mengaktifkan flexbox */
+}
+
+.flex-row {
+  display: flex; /* Mengaktifkan flexbox */
+  flex-direction: row; /* Item tersusun ke samping */
+}
+
+.flex-column {
+  display: flex; /* Mengaktifkan flexbox */
+  flex-direction: column; /* Item tersusun ke bawah */
+}
+
+.flex-center {
+  display: flex; /* Mengaktifkan flexbox */
+  justify-content: center; /* Tengah horizontal */
+  align-items: center; /* Tengah vertikal */
+}
+
+.flex-between {
+  display: flex; /* Mengaktifkan flexbox */
+  justify-content: space-between; /* Item kiri dan kanan berjauhan */
+  align-items: center; /* Rata tengah vertikal */
+}
+
+.flex-wrap {
+  display: flex; /* Mengaktifkan flexbox */
+  flex-wrap: wrap; /* Item turun ke bawah jika layar sempit */
+  gap: 24px; /* Jarak antar item */
+}
+
+
+/* =========================
+   4. NAVBAR RESPONSIVE
+   ========================= */
+
+.navbar {
+  display: flex; /* Membuat isi navbar sejajar */
+  justify-content: space-between; /* Logo kiri, menu kanan */
+  align-items: center; /* Rata tengah vertikal */
+  padding: 24px 0; /* Jarak atas bawah navbar */
+}
+
+.logo {
+  font-size: 24px; /* Ukuran tulisan logo */
+  font-weight: bold; /* Membuat logo tebal */
+}
+
+.nav-menu {
+  display: flex; /* Menu navbar sejajar ke samping */
+  gap: 24px; /* Jarak antar menu */
+  list-style: none; /* Menghilangkan bullet list */
+}
+
+.nav-menu li {
+  font-weight: 500; /* Ketebalan teks menu */
+}
+
+.nav-menu a:hover {
+  color: #2563eb; /* Warna saat menu disentuh */
+}
+
+
+/* =========================
+   5. HERO SECTION 2 CONTENT
+   Contoh: kiri teks, kanan gambar
+   ========================= */
+
+.hero {
+  display: flex; /* Membuat hero menjadi 2 kolom */
+  align-items: center; /* Isi rata tengah vertikal */
+  justify-content: space-between; /* Jarak kiri dan kanan seimbang */
+  gap: 48px; /* Jarak antara teks dan gambar */
+  padding: 80px 0; /* Jarak atas bawah hero */
+}
+
+.hero-content {
+  flex: 1; /* Kolom teks mengambil ruang seimbang */
+}
+
+.hero-image {
+  flex: 1; /* Kolom gambar mengambil ruang seimbang */
+}
+
+.hero-content h1 {
+  font-size: 48px; /* Ukuran judul besar */
+  margin-bottom: 16px; /* Jarak bawah judul */
+}
+
+.hero-content p {
+  font-size: 18px; /* Ukuran paragraf */
+  line-height: 1.7; /* Jarak antar baris teks */
+  margin-bottom: 24px; /* Jarak bawah paragraf */
+}
+
+.hero-image img {
+  border-radius: 24px; /* Membuat gambar rounded */
+}
+
+
+/* =========================
+   6. SECTION DENGAN 2 CONTENT
+   Contoh: About section
+   ========================= */
+
+.two-content {
+  display: flex; /* Membuat section menjadi 2 bagian */
+  align-items: center; /* Rata tengah vertikal */
+  gap: 40px; /* Jarak antar content */
+  padding: 60px 0; /* Jarak atas bawah section */
+}
+
+.content-left {
+  flex: 1; /* Bagian kiri mengambil ruang 1 */
+}
+
+.content-right {
+  flex: 1; /* Bagian kanan mengambil ruang 1 */
+}
+
+
+/* =========================
+   7. SECTION DENGAN 3 CONTENT
+   Contoh: card tujuan, manfaat, kompetensi
+   ========================= */
+
+.three-content {
+  display: flex; /* Membuat 3 content sejajar */
+  gap: 24px; /* Jarak antar card */
+  flex-wrap: wrap; /* Card turun jika layar kecil */
+  padding: 60px 0; /* Jarak section */
+}
+
+.three-content .card {
+  flex: 1 1 250px; /* Card fleksibel, minimal sekitar 250px */
+}
+
+
+/* =========================
+   8. SECTION DENGAN 4 CONTENT
+   Contoh: statistik / fitur
+   ========================= */
+
+.four-content {
+  display: flex; /* Membuat 4 content sejajar */
+  gap: 24px; /* Jarak antar item */
+  flex-wrap: wrap; /* Item turun otomatis saat layar kecil */
+  padding: 60px 0; /* Jarak atas bawah */
+}
+
+.four-content .card {
+  flex: 1 1 220px; /* Ukuran dasar card 220px */
+}
+
+
+/* =========================
+   9. CARD DESIGN
+   ========================= */
+
+.card {
+  background-color: #ffffff; /* Warna background card */
+  padding: 24px; /* Jarak isi card */
+  border-radius: 20px; /* Sudut card rounded */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Bayangan card */
+}
+
+.card h3 {
+  font-size: 22px; /* Ukuran judul card */
+  margin-bottom: 12px; /* Jarak bawah judul card */
+}
+
+.card p {
+  font-size: 16px; /* Ukuran teks card */
+  line-height: 1.6; /* Jarak antar baris */
+  color: #4b5563; /* Warna teks abu */
+}
+
+
+/* =========================
+   10. BUTTON
+   ========================= */
+
+.button-group {
+  display: flex; /* Tombol sejajar */
+  gap: 16px; /* Jarak antar tombol */
+  flex-wrap: wrap; /* Tombol turun jika layar kecil */
+}
+
+.btn {
+  display: inline-flex; /* Agar isi button bisa diatur flex */
+  justify-content: center; /* Teks button ke tengah horizontal */
+  align-items: center; /* Teks button ke tengah vertikal */
+  padding: 14px 28px; /* Ukuran button */
+  border-radius: 999px; /* Membuat button oval */
+  background-color: #2563eb; /* Warna utama button */
+  color: white; /* Warna teks button */
+  font-weight: bold; /* Teks button tebal */
+}
+
+.btn-outline {
+  background-color: transparent; /* Background transparan */
+  color: #2563eb; /* Warna teks biru */
+  border: 2px solid #2563eb; /* Border biru */
+}
+
+
+/* =========================
+   11. CONTOH SECTION PROFILE
+   ========================= */
+
+.profile-section {
+  display: flex; /* Profile dibuat 2 kolom */
+  align-items: center; /* Tengah vertikal */
+  gap: 40px; /* Jarak foto dan teks */
+  padding: 60px 0; /* Jarak section */
+}
+
+.profile-image {
+  flex: 1; /* Kolom foto */
+}
+
+.profile-info {
+  flex: 2; /* Kolom teks lebih besar dari foto */
+}
+
+
+/* =========================
+   12. FOOTER
+   ========================= */
+
+.footer {
+  display: flex; /* Footer dibuat beberapa kolom */
+  justify-content: space-between; /* Kolom berjauhan */
+  gap: 32px; /* Jarak antar kolom */
+  padding: 40px 0; /* Jarak atas bawah footer */
+  border-top: 1px solid #e5e7eb; /* Garis atas footer */
+}
+
+.footer-column {
+  flex: 1; /* Setiap kolom footer seimbang */
+}
+
+
+/* =========================
+   13. RESPONSIVE TABLET & HP
+   ========================= */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Navbar jadi ke bawah */
+    gap: 16px; /* Jarak logo dan menu */
+  }
+
+  .nav-menu {
+    flex-direction: column; /* Menu turun ke bawah */
+    align-items: center; /* Menu rata tengah */
+  }
+
+  .hero {
+    flex-direction: column; /* Hero jadi 1 kolom */
+    text-align: center; /* Teks hero ke tengah */
+  }
+
+  .hero-content h1 {
+    font-size: 34px; /* Judul lebih kecil di HP */
+  }
+
+  .two-content {
+    flex-direction: column; /* 2 content jadi bertumpuk */
+  }
+
+  .profile-section {
+    flex-direction: column; /* Profile jadi bertumpuk */
+    text-align: center; /* Teks profile ke tengah */
+  }
+
+  .footer {
+    flex-direction: column; /* Footer jadi ke bawah */
+    text-align: center; /* Footer rata tengah */
+  }
+
+  .button-group {
+    justify-content: center; /* Button ke tengah di HP */
+  }
+}

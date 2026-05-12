@@ -1,0 +1,188 @@
+.pendahuluan-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.pendahuluan-shell {
+    width: 100%;
+    max-width: 1100px;
+    padding-inline: 0;
+}
+
+.pendahuluan-header {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.pendahuluan-title {
+    margin: 0 0 0.75rem;
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    font-family: "Bungee", sans-serif;
+}
+
+.pendahuluan-description {
+    margin: 0 auto 1.5rem;
+    max-width: 560px;
+    color: var(--text-secondary);
+    font-size: 1.3rem;
+    line-height: 1.35;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.pendahuluan-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.pendahuluan-tab {
+    padding: 0.75rem 1.4rem;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.18);
+    color: var(--text-primary);
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pendahuluan-tab:hover,
+.pendahuluan-tab:focus-visible {
+    background: rgba(255, 255, 255, 0.28);
+    border-color: rgba(255, 255, 255, 0.34);
+    color: var(--text-primary);
+    transform: translateY(-1px);
+    box-shadow: 0 14px 28px rgba(96, 165, 250, 0.12);
+    outline: none;
+}
+
+.pendahuluan-tab.is-active {
+    border-color: transparent;
+    background: linear-gradient(120deg, var(--button-primary), var(--button-secondary));
+    color: #ffffff;
+    box-shadow: 0 14px 30px var(--button-secondary-shadow);
+}
+
+.pendahuluan-panel {
+    width: 100%;
+    background: var(--surface);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border-radius: 20px;
+    box-shadow: 0 0 25px 0 var(--shadow-soft);
+    padding: 30px;
+}
+
+.pendahuluan-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.pendahuluan-grid {
+    display: grid;
+    gap: 1.25rem;
+    align-items: stretch;
+}
+
+.pendahuluan-grid--tujuan {
+    grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+}
+
+.pendahuluan-grid--manfaat {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.pendahuluan-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 26px 28px;
+    border: 1px solid var(--border-soft);
+    border-radius: 18px;
+    background: var(--surface-strong);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.pendahuluan-card--wide {
+    width: 100%;
+}
+
+.pendahuluan-card--centered {
+    justify-content: center;
+}
+
+.pendahuluan-card__title {
+    margin: 0 0 1rem;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    font-family: "Changa One", sans-serif;
+}
+
+.pendahuluan-copy {
+    margin: 0;
+    max-width: 62ch;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.pendahuluan-list {
+    margin: 0;
+    padding-left: 1.2rem;
+    max-width: 62ch;
+    color: var(--text-secondary);
+    display: grid;
+    gap: 0.32rem;
+    line-height: 1.6;
+}
+
+.pendahuluan-list li::marker {
+    color: var(--text-primary);
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    .pendahuluan-grid--manfaat {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 991.98px) {
+    .pendahuluan-panel {
+        padding: 20px;
+    }
+
+    .pendahuluan-grid--tujuan,
+    .pendahuluan-grid--manfaat {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .pendahuluan-section {
+        padding: 1rem 0.75rem;
+    }
+
+    .pendahuluan-title {
+        font-size: 1.9rem;
+    }
+
+    .pendahuluan-description {
+        font-size: 1rem;
+    }
+
+    .pendahuluan-content {
+        gap: 1rem;
+    }
+
+    .pendahuluan-card {
+        padding: 20px;
+    }
+}

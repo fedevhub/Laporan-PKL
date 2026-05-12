@@ -1,0 +1,126 @@
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --bg-base: #f6efe5;
+  --bg-1: #ffffff;
+  --bg-2: #f8fafc;
+  --bg-3: #eef2ff;
+  --page-background:
+    radial-gradient(circle at top left, #60a5fa 0%, transparent 25%),
+    radial-gradient(circle at top right, #c084fc 0%, transparent 25%),
+    radial-gradient(circle at center, #f9a8d4 0%, transparent 30%),
+    radial-gradient(circle at bottom left, #67e8f9 0%, transparent 25%),
+    radial-gradient(circle at 80% 50%, #fde68a 0%, transparent 25%),
+    radial-gradient(circle at bottom, #86efac 0%, transparent 30%),
+    linear-gradient(135deg, #ffffff, #f8fafc, #eef2ff);
+
+  --glow-blue: #60a5fa;
+  --glow-violet: #c084fc;
+  --glow-pink: #f9a8d4;
+  --glow-cyan: #67e8f9;
+  --glow-yellow: #fde68a;
+  --glow-green: #86efac;
+
+  --surface: rgba(255, 255, 255, 0.09);
+  --surface-strong: rgba(255, 255, 255, 0.7);
+  --border-soft: rgba(255, 255, 255, 0.187);
+  --shadow-soft: rgba(0, 0, 0, 0.3);
+
+  --text-primary: #2f2a24;
+  --text-secondary: #4b5563;
+  --text-strong: #292929;
+
+  --button-primary: #ec4899;
+  --button-primary-shadow: rgba(236, 72, 153, 0.45);
+  --button-secondary: #8b5cf6;
+  --button-secondary-shadow: rgba(139, 92, 246, 0.45);
+  --toggle-track: #8fd3ff;
+  --toggle-track-active: #2b426f;
+  --toggle-thumb: #f8fafc;
+  --toggle-sun: #fbbf24;
+  --toggle-moon: #345c9c;
+  --toggle-focus: rgba(96, 165, 250, 0.38);
+  --mobile-nav-surface: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="dark"] {
+  --bg-base: #0a1424;
+  --bg-1: #0c1728;
+  --bg-2: #101d33;
+  --bg-3: #162641;
+  --page-background:
+    radial-gradient(circle at 7% 12%, rgba(96, 165, 250, 0.38) 0%, transparent 36%),
+    radial-gradient(circle at 93% 10%, rgba(192, 132, 252, 0.34) 0%, transparent 35%),
+    radial-gradient(circle at 50% 30%, rgba(249, 168, 212, 0.22) 0%, transparent 30%),
+    radial-gradient(circle at 8% 92%, rgba(103, 232, 249, 0.27) 0%, transparent 33%),
+    radial-gradient(circle at 92% 64%, rgba(253, 230, 138, 0.2) 0%, transparent 29%),
+    radial-gradient(circle at 50% 100%, rgba(134, 239, 172, 0.2) 0%, transparent 31%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.045) 0%, transparent 44%),
+    linear-gradient(145deg, #0c1728 0%, #101d33 46%, #162641 100%);
+
+  --glow-blue: #3b82f6;
+  --glow-violet: #8b5cf6;
+  --glow-pink: #ec4899;
+  --glow-cyan: #06b6d4;
+  --glow-yellow: #f59e0b;
+  --glow-green: #22c55e;
+
+  --surface: rgba(15, 23, 42, 0.42);
+  --surface-strong: rgba(18, 28, 48, 0.72);
+  --border-soft: rgba(255, 255, 255, 0.12);
+  --shadow-soft: rgba(0, 0, 0, 0.34);
+
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-strong: #e5e7eb;
+
+  --button-primary: #f472b6;
+  --button-primary-shadow: #f472b666;
+  --button-secondary: #a78bfa;
+  --button-secondary-shadow: rgba(167, 139, 250, 0.4);
+  --toggle-track: #8fd3ff;
+  --toggle-track-active: #1d3358;
+  --toggle-thumb: #f8fafc;
+  --toggle-sun: #ffd166;
+  --toggle-moon: #8fbaf5;
+  --toggle-focus: rgba(96, 165, 250, 0.3);
+  --mobile-nav-surface: rgba(18, 28, 48, 0.92);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--text-primary);
+  background-color: var(--bg-base);
+  background-image: var(--page-background);
+  overflow-x: hidden;
+  background-attachment: fixed;
+  transition: background-color 0.35s ease, color 0.25s ease;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}

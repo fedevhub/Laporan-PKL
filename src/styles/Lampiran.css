@@ -1,0 +1,63 @@
+.lampiran-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.lampiran-shell {
+    width: 100%;
+    max-width: 1100px;
+    padding-inline: 0;
+}
+
+.lampiran-header {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.lampiran-title {
+    margin: 0 0 0.75rem;
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    font-family: "Bungee", sans-serif;
+}
+
+.lampiran-description {
+    margin: 0 auto 1.5rem;
+    max-width: 560px;
+    color: var(--text-secondary);
+    font-size: 1.3rem;
+    line-height: 1.35;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.lampiran-panel {
+    width: 100%;
+    background: var(--surface);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border-radius: 20px;
+    box-shadow: 0 0 25px 0 var(--shadow-soft);
+    padding: 30px;
+}
+
+@media (max-width: 991.98px) {
+    .lampiran-panel {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .lampiran-section {
+        padding: 1rem 0.75rem;
+    }
+
+    .lampiran-title {
+        font-size: 1.9rem;
+    }
+
+    .lampiran-description {
+        font-size: 1rem;
+    }
+}
