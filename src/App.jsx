@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import siteIcon from "./assets/icon.jpeg";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Profile, { DEFAULT_PROFILE_TAB, PROFILE_SECTION_ID } from "./components/Profile";
@@ -19,6 +20,20 @@ const SECTION_IDS = ["home", PROFILE_SECTION_ID, PENDAHULUAN_SECTION_ID, LAPORAN
 function App() {
   const [activeTabs, setActiveTabs] = useState(INITIAL_TABS);
   const [activeSection, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    const favicon =
+      document.querySelector("link[rel='icon']") ??
+      document.createElement("link");
+
+    favicon.setAttribute("rel", "icon");
+    favicon.setAttribute("type", "image/jpeg");
+    favicon.setAttribute("href", siteIcon);
+
+    if (!favicon.parentNode) {
+      document.head.appendChild(favicon);
+    }
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {

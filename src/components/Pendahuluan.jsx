@@ -12,27 +12,27 @@ const TUJUAN_KHUSUS = [
 ];
 
 const BAGI_SISWA = [
-    "Menjadi lebih paham situasi kerja yang sebenarnya, tidak hanya teori.",
-    "Melatih cara menghadapi masalah secara langsung di lingkungan kerja.",
-    "Membantu mengenali kelebihan dan kekurangan diri saat bekerja.",
-    "Membiasakan diri dengan ritme kerja yang terstruktur dan target.",
-    "Menambahkan pengalaman yang bisa dijadikan nilai tambah saat melamar kerja.",
+    "Memahami dunia kerja secara langsung.",
+    "Melatih cara menghadapi masalah kerja.",
+    "Mengenali kemampuan diri saat bekerja.",
+    "Membiasakan disiplin dan tanggung jawab.",
+    "Menambah bekal untuk masuk dunia kerja.",
 ];
 
 const BAGI_SEKOLAH = [
-    "Mendapat gambaran nyata tentang perkembangan dunia industri.",
-    "Menjadi acuan untuk menyesuaikan metode pembelajaran agar lebih relevan.",
-    "Memperkuat hubungan kerja sama dengan perusahaan tempat PKL.",
-    "Menjadi bahan pertimbangan dalam peningkatan kualitas pendidikan.",
-    "Mendukung terciptanya lingkungan belajar yang lebih aplikatif.",
+    "Mendapat gambaran dunia industri.",
+    "Menyesuaikan pembelajaran dengan kebutuhan kerja.",
+    "Memperkuat kerja sama dengan perusahaan.",
+    "Menjadi bahan evaluasi pembelajaran.",
+    "Mendorong pembelajaran yang lebih aplikatif.",
 ];
 
 const BAGI_PERUSAHAAN = [
-    "Mendapat sudut pandang baru dari siswa yang masih fresh.",
-    "Membantu meringankan beberapa pekerjaan sederhana di perusahaan.",
-    "Menjadi bagian dari kontribusi sosial perusahaan di bidang pendidikan.",
-    "Memperkenalkan lingkungan kerja kepada generasi muda.",
-    "Membangun citra positif perusahaan di kalangan pelajar dan sekolah.",
+    "Mendapat sudut pandang baru dari siswa.",
+    "Membantu pekerjaan sederhana di perusahaan.",
+    "Mendukung dunia pendidikan melalui PKL.",
+    "Mengenalkan budaya kerja kepada siswa.",
+    "Membangun hubungan baik dengan sekolah.",
 ];
 
 function PendahuluanTujuanTab() {
