@@ -165,19 +165,7 @@ export default function Navbar({ onNavigate, activeSection, activeTabs }) {
                                 {NAV_ITEMS.map((item) => {
                                     const isActive = activeSection === item.sectionId;
                                     const isDropdownOpen = openDropdown === item.sectionId;
-                                    const dropdownItems = item.children
-                                        ? [...item.children].sort((firstItem, secondItem) => {
-                                            const activeTabId = activeTabs[item.sectionId];
-                                            const firstIsActive = firstItem.tabId === activeTabId;
-                                            const secondIsActive = secondItem.tabId === activeTabId;
-
-                                            if (firstIsActive === secondIsActive) {
-                                                return 0;
-                                            }
-
-                                            return firstIsActive ? -1 : 1;
-                                        })
-                                        : [];
+                                    const dropdownItems = item.children ?? [];
 
                                     return (
                                         <li

@@ -155,8 +155,8 @@ function LaporanKompetensiTab() {
 function LaporanKesimpulanTab() {
     return (
         <div className="laporan-content">
-            <div className="laporan-grid" data-aos="fade-up">
-                <section className="laporan-card">
+            <div className="laporan-grid">
+                <section className="laporan-card" data-aos="fade-up" data-aos-duration="600">
                     <h3 className="laporan-card__title">Kesimpulan</h3>
                     <p className="laporan-copy">
                         PKL di 3PM Solution memberikan banyak pengalaman dan pembelajaran baru bagi saya,
@@ -167,7 +167,7 @@ function LaporanKesimpulanTab() {
                     </p>
                 </section>
 
-                <section className="laporan-card">
+                <section className="laporan-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
                     <h3 className="laporan-card__title">Kesan</h3>
                     <p className="laporan-copy">
                         Selama menjalani PKL di 3PM Solution, saya merasa senang karena mendapatkan lingkungan kerja
@@ -178,8 +178,8 @@ function LaporanKesimpulanTab() {
                 </section>
             </div>
 
-            <div className="pendahuluan-grid pendahuluan-grid--manfaat" data-aos="fade-up">
-                <section className="pendahuluan-card" data-aos="zoom-in" data-aos-duration="600">
+            <div className="pendahuluan-grid pendahuluan-grid--manfaat">
+                <section className="pendahuluan-card" data-aos="fade-up" data-aos-duration="600" data-aos-offset="200">
                     <h3 className="pendahuluan-card__title">Saran Bagi Siswa</h3>
                     <ul className="pendahuluan-list">
                         {BAGI_SISWA.map((item) => (
@@ -188,7 +188,7 @@ function LaporanKesimpulanTab() {
                     </ul>
                 </section>
 
-                <section className="pendahuluan-card" data-aos="zoom-in" data-aos-duration="600">
+                <section className="pendahuluan-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100" data-aos-offset="200">
                     <h3 className="pendahuluan-card__title">Saran Bagi Sekolah</h3>
                     <ul className="pendahuluan-list">
                         {BAGI_SEKOLAH.map((item) => (
@@ -197,7 +197,7 @@ function LaporanKesimpulanTab() {
                     </ul>
                 </section>
 
-                <section className="pendahuluan-card" data-aos="zoom-in" data-aos-duration="600">
+                <section className="pendahuluan-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200" data-aos-offset="200">
                     <h3 className="pendahuluan-card__title">Saran Bagi Perusahaan</h3>
                     <ul className="pendahuluan-list">
                         {BAGI_PERUSAHAAN.map((item) => (

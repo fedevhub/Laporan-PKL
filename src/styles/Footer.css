@@ -1,5 +1,6 @@
 #contact {
     padding: 7rem 0.75rem 2.5rem;
+    will-change: transform;
 }
 
 #contact .footer-shell {

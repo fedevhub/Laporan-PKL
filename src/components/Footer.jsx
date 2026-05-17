@@ -66,7 +66,7 @@ const SOCIAL_LINKS = [
 
 export default function Footer({ onNavigate }) {
     return (
-        <section id="contact" data-aos="fade-up">
+        <section id="contact" data-aos="fade-up" data-aos-once="true">
             <footer className="container footer-shell">
                 <div className="site-footer">
                     <div className="site-footer__top">
