@@ -15,7 +15,7 @@ const BIODATA_SISWA = [
     ["No. Telepon", "+62 823 3071 7123"],
     ["Email", "fitrirachmania29@gmail.com"],
     ["Sekolah", "SMK Negeri 8 Malang"],
-    
+
 ];
 
 const PROFIL_INDUSTRI = [
@@ -35,8 +35,8 @@ const MISI_PERUSAHAAN = [
 function ProfileSiswaTab() {
     return (
         <div className="profile-tab-content">
-            <div className="profile-grid">
-                <section className="image-siswa">
+            <div className="profile-grid" data-aos="fade-up">
+                <section className="image-siswa" data-aos="zoom-in" data-aos-duration="600">
                     <img
                         src={fotoSiswa}
                         alt="Foto Siswa"
@@ -47,7 +47,7 @@ function ProfileSiswaTab() {
                         decoding="async"
                     />
                 </section>
-                <section className="profile-card">
+                <section className="profile-card" data-aos="zoom-in" data-aos-duration="600">
                     <h3 className="profile-card__title">Profil Siswa</h3>
                     <div className="profile-table">
                         {BIODATA_SISWA.map(([label, value]) => (
@@ -67,8 +67,8 @@ function ProfileSiswaTab() {
 function ProfileIndustriTab() {
     return (
         <div className="profile-tab-content">
-            <div className="profile-grid">
-                <section className="image-siswa">
+            <div className="profile-grid" data-aos="fade-up">
+                <section className="image-siswa" data-aos="zoom-in" data-aos-duration="600">
                     <img
                         src={fotoIndustri}
                         alt="Foto Industri"
@@ -79,7 +79,7 @@ function ProfileIndustriTab() {
                         decoding="async"
                     />
                 </section>
-                <section className="profile-card">
+                <section className="profile-card" data-aos="zoom-in" data-aos-duration="600">
                     <h3 className="profile-card__title">Profil Industri</h3>
                     <div className="profile-table">
                         {PROFIL_INDUSTRI.map(([label, value]) => (
@@ -92,18 +92,17 @@ function ProfileIndustriTab() {
                     </div>
                 </section>
 
-                <section className="profile-card">
+                <section className="profile-card" data-aos="zoom-in" data-aos-duration="600">
                     <h3 className="profile-card__title">Deskripsi Singkat</h3>
                     <p className="profile-copy">
-                        3PM Solution Software House didirikan pada tahun 2009 oleh Ricky Subiantoputra, S.Kom 
-                        dan bergerak di bidang pengembangan aplikasi dan layanan teknologi digital. 
-                        Perusahaan ini menyediakan layanan pengembangan aplikasi desktop, web, dan mobile untuk 
+                        3PM Solution Software House didirikan pada tahun 2009 oleh Ricky Subiantoputra, S.Kom
+                        dan bergerak di bidang pengembangan aplikasi dan layanan teknologi digital.
+                        Perusahaan ini menyediakan layanan pengembangan aplikasi desktop, web, dan mobile untuk
                         berbagai kebutuhan perusahaan.
                     </p>
                 </section>
 
-
-                <section className="profile-card profile-card--wide">
+                <section className="profile-card profile-card--wide" data-aos="zoom-in" data-aos-duration="600">
                     <h3 className="profile-card__title">Misi Perusahaan</h3>
                     <ul className="profile-list">
                         {MISI_PERUSAHAAN.map((item) => (
@@ -113,7 +112,7 @@ function ProfileIndustriTab() {
                 </section>
             </div>
 
-            <section className="profile-card">
+            <section className="profile-card" data-aos="fade-up">
                 <h3 className="profile-card__title">Lokasi Industri</h3>
                 <div className="profile-map">
                     <iframe
@@ -170,7 +169,7 @@ export default function Profile({ activeTab, onTabChange }) {
                     </div>
                 </div>
 
-                <div className="profile-panel">
+                <div className="profile-panel" key={activeTab}>
                     <ActiveComponent />
                 </div>
             </div>
