@@ -11,7 +11,7 @@ export const DEFAULT_LAPORAN_TAB = "kompetensi";
 const BAGI_SISWA = [
     "Sebaiknya lebih aktif dalam bertanya dan belajar selama PKL.",
     "Menjaga sikap, disiplin, dan tanggung jawab di tempat kerja.",
-    "Memanfaatkan kesempatan PKL srbaik mungkin untuk menambah pengalaman.",
+    "Memanfaatkan kesempatan PKL sebaik mungkin untuk menambah pengalaman.",
 ];
 
 const BAGI_SEKOLAH = [

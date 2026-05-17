@@ -279,3 +279,69 @@
         align-items: center;
     }
 }
+
+/* ─── Footer Animations ─────────────────────────────────── */
+
+/* 1. Gentle breathing glow on the card */
+@keyframes footer-breathe {
+    0%, 100% {
+        box-shadow: 0 0 25px 0 var(--shadow-soft);
+    }
+    50% {
+        box-shadow: 0 0 42px 6px rgba(96, 165, 250, 0.09), 0 0 25px 0 var(--shadow-soft);
+    }
+}
+
+#contact .site-footer {
+    animation: footer-breathe 5s ease-in-out infinite;
+}
+
+/* 2. Staggered float on social buttons */
+@keyframes footer-float {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-4px); }
+}
+
+.site-footer__social-button:nth-child(1) {
+    animation: footer-float 3.2s ease-in-out 0s infinite;
+}
+.site-footer__social-button:nth-child(2) {
+    animation: footer-float 3.2s ease-in-out 0.25s infinite;
+}
+.site-footer__social-button:nth-child(3) {
+    animation: footer-float 3.2s ease-in-out 0.5s infinite;
+}
+.site-footer__social-button:nth-child(4) {
+    animation: footer-float 3.2s ease-in-out 0.75s infinite;
+}
+
+/* Pause float on hover so it doesn't fight the hover scale */
+.site-footer__social-button:hover,
+.site-footer__social-button:focus-visible {
+    animation-play-state: paused;
+}
+
+/* 3. One-time staggered fade-up for footer sections */
+@keyframes footer-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#contact .site-footer__brand  {
+    animation: footer-fade-up 0.55s ease-out 0.15s both;
+}
+#contact .site-footer__nav    {
+    animation: footer-fade-up 0.55s ease-out 0.28s both;
+}
+#contact .site-footer__social {
+    animation: footer-fade-up 0.55s ease-out 0.42s both;
+}
+#contact .site-footer__bottom {
+    animation: footer-fade-up 0.45s ease-out 0.55s both;
+}

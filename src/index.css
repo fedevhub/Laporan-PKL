@@ -101,6 +101,20 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Ensure every navigable section clears the sticky navbar */
+:root {
+  --navbar-height: 80px; /* fallback; overwritten dynamically by JS */
+}
+
+#home,
+#profile,
+#pendahuluan,
+#laporan,
+#lampiran,
+#contact {
+  scroll-margin-top: calc(var(--navbar-height) + 12px);
+}
+
 body {
   margin: 0;
   min-width: 320px;

@@ -15,6 +15,26 @@ const INITIAL_TABS = {
   [LAPORAN_SECTION_ID]: DEFAULT_LAPORAN_TAB,
 };
 
+const SESSION_PAGE_KEY = "pkl_current_page";
+const SESSION_TABS_KEY = "pkl_active_tabs";
+
+function readSession() {
+  try {
+    const page = sessionStorage.getItem(SESSION_PAGE_KEY);
+    const tabs = JSON.parse(sessionStorage.getItem(SESSION_TABS_KEY) ?? "null");
+    return { page, tabs };
+  } catch {
+    return { page: null, tabs: null };
+  }
+}
+
+function saveSession(page, tabs) {
+  try {
+    sessionStorage.setItem(SESSION_PAGE_KEY, page);
+    sessionStorage.setItem(SESSION_TABS_KEY, JSON.stringify(tabs));
+  } catch { /* storage not available */ }
+}
+
 const HOME_SECTION_IDS = ["home", PROFILE_SECTION_ID, PENDAHULUAN_SECTION_ID, "contact"];
 const PAGE_HOME = "home";
 const PAGE_LAPORAN = LAPORAN_SECTION_ID;
@@ -49,8 +69,24 @@ function buildPageUrl(page, sectionId) {
 
 function App() {
   const pendingHomeScrollRef = useRef(null);
-  const [currentPage, setCurrentPage] = useState(() => getCurrentPage());
-  const [activeTabs, setActiveTabs] = useState(INITIAL_TABS);
+  const [currentPage, setCurrentPage] = useState(() => {
+    const urlPage = getCurrentPage();
+    const { page: sessionPage } = readSession();
+    // URL query param takes priority (direct link), then session
+    if (urlPage !== PAGE_HOME) return urlPage;
+    if (sessionPage && (sessionPage === PAGE_LAPORAN || sessionPage === PAGE_LAMPIRAN)) {
+      window.history.replaceState(null, "", buildPageUrl(sessionPage));
+      return sessionPage;
+    }
+    return urlPage;
+  });
+  const [activeTabs, setActiveTabs] = useState(() => {
+    const { tabs } = readSession();
+    // Only restore laporan tab (page-level choice). Profile & Pendahuluan always reset to default.
+    return tabs
+      ? { ...INITIAL_TABS, [LAPORAN_SECTION_ID]: tabs[LAPORAN_SECTION_ID] ?? DEFAULT_LAPORAN_TAB }
+      : INITIAL_TABS;
+  });
   const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
@@ -66,6 +102,34 @@ function App() {
       document.head.appendChild(favicon);
     }
   }, []);
+
+  // Disable browser scroll restoration so reload always starts at top
+  useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+    window.scrollTo(0, 0);
+  }, []);
+
+  // Measure real navbar height and expose as CSS variable so sections
+  // can use scroll-margin-top to never be hidden under the sticky bar.
+  useEffect(() => {
+    const updateNavbarHeight = () => {
+      const header = document.querySelector(".site-header");
+      if (!header) return;
+      const height = Math.ceil(header.getBoundingClientRect().height);
+      document.documentElement.style.setProperty("--navbar-height", `${height}px`);
+    };
+
+    updateNavbarHeight();
+    window.addEventListener("resize", updateNavbarHeight);
+    return () => window.removeEventListener("resize", updateNavbarHeight);
+  }, []);
+
+  // Persist current page and tabs to sessionStorage
+  useEffect(() => {
+    saveSession(currentPage, activeTabs);
+  }, [currentPage, activeTabs]);
 
   useEffect(() => {
     const handleLocationChange = () => {
@@ -96,22 +160,20 @@ function App() {
     return Math.ceil(header.getBoundingClientRect().height + 12);
   };
 
-  const scrollToSection = (sectionId) => {
-    window.requestAnimationFrame(() => {
+  const scrollToSection = (sectionId, delay = 0) => {
+    const doScroll = () => {
       const sectionElement = document.getElementById(sectionId);
-
-      if (!sectionElement) {
-        return;
-      }
-
+      if (!sectionElement) return;
       const sectionTop = sectionElement.getBoundingClientRect().top + window.scrollY;
       const targetTop = Math.max(sectionTop - getHeaderOffset(), 0);
+      window.scrollTo({ top: targetTop, behavior: "smooth" });
+    };
 
-      window.scrollTo({
-        top: targetTop,
-        behavior: "smooth",
-      });
-    });
+    if (delay > 0) {
+      window.setTimeout(doScroll, delay);
+    } else {
+      window.requestAnimationFrame(doScroll);
+    }
   };
 
   const openPage = (page) => {
@@ -198,7 +260,8 @@ function App() {
     }
 
     pendingHomeScrollRef.current = null;
-    scrollToSection(targetSection);
+    // Delay to allow React to finish rendering the home page DOM
+    scrollToSection(targetSection, 80);
   }, [currentPage]);
 
   return (
