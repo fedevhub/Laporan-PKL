@@ -37,7 +37,7 @@ const BAGI_PERUSAHAAN = [
 
 function PendahuluanTujuanTab() {
     return (
-        <div className="pendahuluan-content">
+        <div className="pendahuluan-content" data-aos="fade-down">
             <div className="pendahuluan-grid pendahuluan-grid--tujuan">
                 <section className="pendahuluan-card pendahuluan-card--wide pendahuluan-card--centered">
                     <h3 className="pendahuluan-card__title">Tujuan Umum</h3>
@@ -64,7 +64,7 @@ function PendahuluanTujuanTab() {
 
 function PendahuluanManfaatTab() {
     return (
-        <div className="pendahuluan-content">
+        <div className="pendahuluan-content" data-aos="fade-down">
             <div className="pendahuluan-grid pendahuluan-grid--manfaat">
                 <section className="pendahuluan-card">
                     <h3 className="pendahuluan-card__title">Bagi Siswa</h3>
@@ -115,7 +115,7 @@ export default function Pendahuluan({ activeTab, onTabChange }) {
     const ActiveComponent = currentTab.component;
 
     return (
-        <section id={PENDAHULUAN_SECTION_ID} className="pendahuluan-section">
+        <section id={PENDAHULUAN_SECTION_ID} className="pendahuluan-section" data-aos="fade-up">
             <div className="container pendahuluan-shell">
                 <div className="pendahuluan-header">
                     <h2 className="pendahuluan-title">Pendahuluan</h2>

@@ -2,6 +2,9 @@ import "../styles/Laporan.css";
 import ticat1 from "../assets/ticat1.jpeg";
 import ticat2 from "../assets/ticat2.jpeg";
 import ticat3 from "../assets/ticat3.jpeg";
+import erp1 from "../assets/erp1.jpeg";
+import erp2 from "../assets/erp2.jpeg";
+import erp3 from "../assets/erp3.jpeg";
 export const LAPORAN_SECTION_ID = "laporan";
 export const DEFAULT_LAPORAN_TAB = "kompetensi";
 
@@ -27,25 +30,25 @@ const KOMPETENSI_PROJECTS = [
     {
         id: "project-pemesanan",
         label: "Project 01",
-        title: "Web Aplikasi Pemesanan Barang",
+        title: "Website Ticketing Pengaduan (TICAT)",
         description: [
-            "Pada project ini, saya membantu mengerjakan web aplikasi pemesanan barang berbasis Angular yang terhubung dengan API. Tugas yang saya kerjakan meliputi pembuatan dan penyesuaian tampilan halaman, memperbaiki layout, serta membantu pengembangan fitur pada bagian front-end menggunakan HTML, CSS, Bootstrap, dan TypeScript.",
+            "Pada project ini, saya diminta membuat Website Ticketing Pengaduan (TICAT) berbasis Angular yang terhubung dengan API yang sudah tersedia. Tugas yang saya kerjakan meliputi pembuatan dan penyesuaian tampilan halaman, memperbaiki layout, serta membantu pengembangan fitur pada bagian front-end menggunakan HTML, CSS, Bootstrap, dan TypeScript.",
         ],
         stack: ["Angular", "TypeScript", "Bootstrap", "API Integration"],
         gallery: [
             {
-                title: "Halaman Utama",
-                text: "Tampilan utama disusun agar alur pemesanan barang lebih mudah dipahami pengguna.",
+                title: "Form Edit/Tambah User",
+                text: "Tampilan form untuk menambah atau mengedit data user.",
                 image: ticat1,
             },
             {
-                title: "Integrasi Data",
-                text: "Komponen front-end dihubungkan dengan data API agar informasi produk dan pesanan tampil realtime.",
+                title: "Tabel List Daftar Equipment",
+                text: "Menampilkan daftar equipment secara rapi dan terstruktur.",
                 image: ticat2,
             },
             {
-                title: "Optimasi Layout",
-                text: "Layout diperbaiki agar spacing, struktur, dan responsivitas halaman menjadi lebih rapi.",
+                title: "List Request",
+                text: "Menampilkan daftar request pengaduan untuk memudahkan proses pengecekan.",
                 image: ticat3,
             },
         ],
@@ -53,7 +56,7 @@ const KOMPETENSI_PROJECTS = [
     {
         id: "project-gudang-lengkap",
         label: "Project 02",
-        title: "Website Gudang Lengkap",
+        title: "Website Gudang Klien (ERP)",
         description: [
             "Selain itu, saya juga membantu mengerjakan beberapa bagian website milik client perusahaan, yaitu Gudang Lengkap. Pada project ini, saya membuat beberapa bagian tampilan website menggunakan Angular, HTML, CSS, Tailwind CSS, dan TypeScript yang terhubung dengan API.",
             "Setiap bagian yang telah selesai dikerjakan akan diperiksa terlebih dahulu oleh Data Analyst. Setelah itu, saya melakukan revisi kembali sesuai masukan dan kebutuhan project hingga hasilnya sesuai dengan yang diinginkan.",
@@ -61,19 +64,19 @@ const KOMPETENSI_PROJECTS = [
         stack: ["Angular", "HTML", "CSS", "Tailwind CSS", "API Integration"],
         gallery: [
             {
-                title: "Dashboard Overview",
-                text: "Ringkasan data utama dibuat lebih terstruktur supaya pengguna cepat memahami informasi penting.",
-                image: ticat1,
+                title: "Tabel List",
+                text: "Menampilkan data utama dalam bentuk tabel agar informasi lebih mudah dibaca.",
+                image: erp1,
             },
             {
-                title: "Tabel dan Filter",
-                text: "Bagian tabel, pencarian, dan filter dirapikan agar proses pengelolaan data lebih efisien.",
-                image: ticat2,
+                title: "Form Edit/Tambah",
+                text: "Digunakan untuk menambah atau mengubah data sesuai kebutuhan pengguna.",
+                image: erp2,
             },
             {
-                title: "Komponen Responsive",
-                text: "Setiap komponen diuji kembali agar tetap nyaman dipakai pada berbagai ukuran layar.",
-                image: ticat3,
+                title: "Setting Payroll",
+                text: "Menampilkan pengaturan payroll untuk membantu pengelolaan data penggajian.",
+                image: erp3,
             },
         ],
     },
@@ -82,7 +85,7 @@ const KOMPETENSI_PROJECTS = [
 function LaporanKompetensiTab() {
     return (
         <div className="laporan-content">
-            <section className="laporan-card laporan-card--wide">
+            <section className="laporan-card laporan-card--wide" data-aos="fade-up">
                 <h3 className="laporan-card__title">Kompetensi yang Diterapkan</h3>
                 <p className="laporan-copy">
                     Selama melaksanakan Praktik Kerja Lapangan (PKL) di 3PM Solution,
@@ -100,7 +103,7 @@ function LaporanKompetensiTab() {
             </section>
 
             {KOMPETENSI_PROJECTS.map((project) => (
-                <section key={project.id} className="laporan-project">
+                <section key={project.id} className="laporan-project" data-aos="fade-up">
                     <div className="laporan-project__intro">
                         <div className="laporan-project__meta">
                             <span className="laporan-project__label">{project.label}</span>
@@ -125,8 +128,8 @@ function LaporanKompetensiTab() {
                     </div>
 
                     <div className="laporan-project__gallery">
-                        {project.gallery.map((item, index) => (
-                            <article key={`${project.id}-${index}`} className="laporan-image">
+                        {project.gallery.map((item, galleryIndex) => (
+                            <article key={`${project.id}-${galleryIndex}`} className="laporan-image" data-aos="zoom-in" data-aos-duration="600">
                                 <img
                                     src={item.image}
                                     alt={item.title}
@@ -152,14 +155,14 @@ function LaporanKompetensiTab() {
 function LaporanKesimpulanTab() {
     return (
         <div className="laporan-content">
-            <div className="laporan-grid">
+            <div className="laporan-grid" data-aos="fade-up">
                 <section className="laporan-card">
                     <h3 className="laporan-card__title">Kesimpulan</h3>
                     <p className="laporan-copy">
-                        PKL di 3PM Solution memberikan banyak pengalaman dan pembelajaran baru bagi saya, 
-                        khususnya di bidang front-end development dan dunia kerja IT. Selama kegiatan berlangsung, 
+                        PKL di 3PM Solution memberikan banyak pengalaman dan pembelajaran baru bagi saya,
+                        khususnya di bidang front-end development dan dunia kerja IT. Selama kegiatan berlangsung,
                         saya mempelajari proses pengembangan aplikasi, integrasi API, kerja sama tim, serta bagaimana
-                        alur pengerjaan project di lingkungan software house. Pengalaman ini juga membantu saya 
+                        alur pengerjaan project di lingkungan software house. Pengalaman ini juga membantu saya
                         meningkatkan kemampuan teknis maupun soft skill yang dapat menjadi bekal untuk ke depannya.
                     </p>
                 </section>
@@ -167,16 +170,16 @@ function LaporanKesimpulanTab() {
                 <section className="laporan-card">
                     <h3 className="laporan-card__title">Kesan</h3>
                     <p className="laporan-copy">
-                        Selama menjalani PKL di 3PM Solution, saya merasa senang karena mendapatkan lingkungan kerja 
-                        yang nyaman dan banyak pengalaman baru. Saya juga mendapatkan bimbingan dan arahan yang membantu 
-                        saya lebih memahami pekerjaan serta proses kerja di dunia industri. Selain itu, suasana kerja 
+                        Selama menjalani PKL di 3PM Solution, saya merasa senang karena mendapatkan lingkungan kerja
+                        yang nyaman dan banyak pengalaman baru. Saya juga mendapatkan bimbingan dan arahan yang membantu
+                        saya lebih memahami pekerjaan serta proses kerja di dunia industri. Selain itu, suasana kerja
                         yang baik membuat saya lebih mudah beradaptasi dan belajar selama kegiatan PKL berlangsung.
                     </p>
                 </section>
             </div>
 
-            <div className="pendahuluan-grid pendahuluan-grid--manfaat">
-                <section className="pendahuluan-card">
+            <div className="pendahuluan-grid pendahuluan-grid--manfaat" data-aos="fade-up">
+                <section className="pendahuluan-card" data-aos="zoom-in" data-aos-duration="600">
                     <h3 className="pendahuluan-card__title">Saran Bagi Siswa</h3>
                     <ul className="pendahuluan-list">
                         {BAGI_SISWA.map((item) => (
@@ -185,7 +188,7 @@ function LaporanKesimpulanTab() {
                     </ul>
                 </section>
 
-                <section className="pendahuluan-card">
+                <section className="pendahuluan-card" data-aos="zoom-in" data-aos-duration="600">
                     <h3 className="pendahuluan-card__title">Saran Bagi Sekolah</h3>
                     <ul className="pendahuluan-list">
                         {BAGI_SEKOLAH.map((item) => (
@@ -194,7 +197,7 @@ function LaporanKesimpulanTab() {
                     </ul>
                 </section>
 
-                <section className="pendahuluan-card">
+                <section className="pendahuluan-card" data-aos="zoom-in" data-aos-duration="600">
                     <h3 className="pendahuluan-card__title">Saran Bagi Perusahaan</h3>
                     <ul className="pendahuluan-list">
                         {BAGI_PERUSAHAAN.map((item) => (
@@ -225,7 +228,7 @@ export default function Laporan({ activeTab, onTabChange }) {
     const ActiveComponent = currentTab.component;
 
     return (
-        <section id={LAPORAN_SECTION_ID} className="laporan-section">
+        <section id={LAPORAN_SECTION_ID} className="laporan-section" data-aos="fade-up">
             <div className="container laporan-shell">
                 <div className="laporan-header">
                     <h2 className="laporan-title">Laporan</h2>

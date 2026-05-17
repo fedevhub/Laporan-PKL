@@ -148,7 +148,7 @@ export default function Profile({ activeTab, onTabChange }) {
     const ActiveComponent = currentTab.component;
 
     return (
-        <section id={PROFILE_SECTION_ID} className="profile-section">
+        <section id={PROFILE_SECTION_ID} className="profile-section" data-aos="fade-up">
             <div className="container profile-shell">
                 <div className="profile-header">
                     <h2 className="profile-title">Profile</h2>

@@ -31,7 +31,6 @@ const NAV_ITEMS = [
         ],
     },
     { label: "Lampiran", sectionId: "lampiran" },
-    { label: "Contact", sectionId: "contact" },
 ];
 
 export default function Navbar({ onNavigate, activeSection, activeTabs }) {

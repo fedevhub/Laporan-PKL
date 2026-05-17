@@ -2,11 +2,11 @@ import "../styles/Footer.css";
 import logo from "../assets/logo smk 8.png";
 
 const FOOTER_LINKS = [
-    { label: "Home", href: "#home" },
-    { label: "Profile", href: "#profile" },
-    { label: "Pendahuluan", href: "#pendahuluan" },
-    { label: "Laporan", href: "#laporan" },
-    { label: "Lampiran", href: "#lampiran" },
+    { label: "Home", sectionId: "home" },
+    { label: "Profile", sectionId: "profile" },
+    { label: "Pendahuluan", sectionId: "pendahuluan" },
+    { label: "Laporan", sectionId: "laporan" },
+    { label: "Lampiran", sectionId: "lampiran" },
 ];
 
 const SOCIAL_LINKS = [
@@ -64,13 +64,17 @@ const SOCIAL_LINKS = [
     },
 ];
 
-export default function Footer() {
+export default function Footer({ onNavigate }) {
     return (
-        <section id="contact">
+        <section id="contact" data-aos="fade-up">
             <footer className="container footer-shell">
                 <div className="site-footer">
                     <div className="site-footer__top">
-                        <a href="#home" className="site-footer__brand">
+                        <button
+                            type="button"
+                            className="site-footer__brand site-footer__brand-button"
+                            onClick={() => onNavigate("home")}
+                        >
                             <img
                                 src={logo}
                                 alt="Logo SMK Negeri 8 Malang"
@@ -83,13 +87,18 @@ export default function Footer() {
                             <div className="site-footer__brand-copy">
                                 <h3 className="site-footer__title">Laporan PKL</h3>
                             </div>
-                        </a>
+                        </button>
 
                         <nav className="site-footer__nav" aria-label="Footer navigation">
                             {FOOTER_LINKS.map((link) => (
-                                <a key={link.label} href={link.href} className="site-footer__link">
+                                <button
+                                    key={link.label}
+                                    type="button"
+                                    className="site-footer__link"
+                                    onClick={() => onNavigate(link.sectionId)}
+                                >
                                     {link.label}
-                                </a>
+                                </button>
                             ))}
                         </nav>
 
