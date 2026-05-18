@@ -14,7 +14,7 @@ export default function Home({ onNavigate }) {
 
                     <div className="button-group">
                         <button type="button" className="btn btn-primary" onClick={() => onNavigate("profile")}>Read More</button>
-                        <a href="https://drive.google.com/drive/folders/1fE2XgCD_0hwd1_3el3OzCCD8if_ohZ_K?usp=sharing" className="btn btn-secondary">View Proposal</a>
+                        <a href="https://sites.google.com/view/fitri-rachmania-harianto/home" className="btn btn-secondary">Open Google Site</a>
                     </div>
                 </div>
             </div>

@@ -120,7 +120,7 @@ export default function Footer({ onNavigate }) {
 
                     <div className="site-footer__bottom">
                         <p className="site-footer__copyright">
-                            Copyright © 2026 Fitri Rachmania Harianto. All rights reserved.
+                            Copyright © 2026 Fitri Rachmania H. All rights reserved.
                         </p>
                     </div>
                 </div>

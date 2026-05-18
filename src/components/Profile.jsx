@@ -12,7 +12,7 @@ const BIODATA_SISWA = [
     ["Jurusan", "Rekayasa Perangkat Lunak"],
     ["NIS", "5704/1384.63"],
     ["Kelas", "XI RPL D"],
-    ["No. Telepon", "+62 823 3071 7123"],
+    ["No. Telepon", "+62 823-3071-7123"],
     ["Email", "fitrirachmania29@gmail.com"],
     ["Sekolah", "SMK Negeri 8 Malang"],
 
