@@ -48,7 +48,7 @@ function ProfileSiswaTab() {
                     />
                 </section>
                 <section className="profile-card" data-aos="zoom-in" data-aos-duration="600">
-                    <h3 className="profile-card__title">Profil Siswa</h3>
+                    <h3 className="profile-card__title">Profile Siswa</h3>
                     <div className="profile-table">
                         {BIODATA_SISWA.map(([label, value]) => (
                             <div key={label} className="profile-table__row">
@@ -80,7 +80,7 @@ function ProfileIndustriTab() {
                     />
                 </section>
                 <section className="profile-card" data-aos="zoom-in" data-aos-duration="600">
-                    <h3 className="profile-card__title">Profil Industri</h3>
+                    <h3 className="profile-card__title">Profile Industri</h3>
                     <div className="profile-table">
                         {PROFIL_INDUSTRI.map(([label, value]) => (
                             <div key={label} className="profile-table__row">
