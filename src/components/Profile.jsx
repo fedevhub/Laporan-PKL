@@ -97,13 +97,13 @@ function ProfileIndustriTab() {
                     <p className="profile-copy">
                         3PM Solution Software House didirikan pada tahun 2009 oleh Ricky Subiantoputra, S.Kom
                         dan bergerak di bidang pengembangan aplikasi dan layanan teknologi digital.
-                        Perusahaan ini menyediakan layanan pengembangan aplikasi desktop, web, dan mobile untuk
-                        berbagai kebutuhan perusahaan.
+                        industri ini menyediakan layanan pengembangan aplikasi desktop, web, dan mobile untuk
+                        berbagai kebutuhan industri.
                     </p>
                 </section>
 
                 <section className="profile-card profile-card--wide" data-aos="zoom-in" data-aos-duration="600">
-                    <h3 className="profile-card__title">Misi Perusahaan</h3>
+                    <h3 className="profile-card__title">Misi Industri</h3>
                     <ul className="profile-list">
                         {MISI_PERUSAHAAN.map((item) => (
                             <li key={item}>{item}</li>
@@ -113,7 +113,7 @@ function ProfileIndustriTab() {
             </div>
 
             <section className="profile-card" data-aos="fade-up">
-                <h3 className="profile-card__struktur">Struktur Perusahaan</h3>
+                <h3 className="profile-card__struktur">Struktur Industri</h3>
                 <div className="organization-section">
 
                     <div className="org-level top">
@@ -258,7 +258,7 @@ export default function Profile({ activeTab, onTabChange }) {
                 <div className="profile-header">
                     <h2 className="profile-title">Profile</h2>
                     <p className="profile-description">
-                        Menampilkan informasi mengenai siswa PKL serta profil perusahaan tempat pelaksanaan PKL berlangsung.
+                        Menampilkan informasi mengenai siswa PKL serta profil industri tempat pelaksanaan PKL berlangsung.
                     </p>
 
                     <div className="profile-tabs">
