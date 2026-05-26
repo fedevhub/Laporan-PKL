@@ -142,6 +142,14 @@
     font-family: "Changa One", sans-serif;
 }
 
+.profile-card__struktur {
+    margin: 2rem 0 1rem;
+    color: var(--text-primary);
+    font-size:2rem;
+    font-family: "Changa One", sans-serif;
+    text-align: center;
+}
+
 .profile-copy {
     margin: 0;
     color: var(--text-secondary);
@@ -257,5 +265,117 @@
 
     .profile-map__frame {
         min-height: 280px;
+    }
+}
+
+.organization-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.org-level {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.org-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 220px;
+    padding: 18px;
+    border-radius: 22px;
+
+    background: var(--surface-strong);
+    border: 1px solid var(--border-soft);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    box-shadow: 0 0 25px var(--shadow-soft);
+
+    transition: 0.3s ease;
+}
+
+.org-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 35px rgba(167, 139, 250, 0.45);
+}
+
+.org-card h3 {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+}
+
+.org-card p {
+    margin: 4px 0 0;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.org-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg,
+            var(--button-primary),
+            var(--button-secondary));
+
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+
+    box-shadow: 0 0 20px var(--button-secondary-shadow);
+}
+
+.leader {
+    transform: scale(1.06);
+}
+
+.org-line.vertical {
+    width: 2px;
+    height: 40px;
+
+    background: linear-gradient(to bottom,
+            var(--button-primary),
+            var(--button-secondary));
+}
+
+.org-line.horizontal {
+    width: 70%;
+    height: 2px;
+
+    background: linear-gradient(to right,
+            transparent,
+            var(--button-primary),
+            var(--button-secondary),
+            transparent);
+}
+
+@media (max-width: 768px) {
+
+    .org-level {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .org-line.horizontal {
+        display: none;
+    }
+
+    .org-card {
+        width: 100%;
+        max-width: 320px;
     }
 }

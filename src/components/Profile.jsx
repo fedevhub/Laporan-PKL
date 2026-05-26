@@ -113,6 +113,112 @@ function ProfileIndustriTab() {
             </div>
 
             <section className="profile-card" data-aos="fade-up">
+                <h3 className="profile-card__struktur">Struktur Perusahaan</h3>
+                <div className="organization-section">
+
+                    <div className="org-level top">
+                        <div className="org-card leader">
+                            <div className="org-avatar">R</div>
+                            <div>
+                                <h3>Ricky</h3>
+                                <p>Owner</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="org-line vertical"></div>
+
+                    <div className="org-line horizontal"></div>
+
+                    <div className="org-level">
+
+                        <div className="org-card">
+                            <div className="org-avatar">L</div>
+                            <div>
+                                <h3>Latief</h3>
+                                <p>Programmer</p>
+                            </div>
+                        </div>
+
+                        <div className="org-card">
+                            <div className="org-avatar">M</div>
+                            <div>
+                                <h3>Miko</h3>
+                                <p>Developer</p>
+                            </div>
+                        </div>
+
+                        <div className="org-card">
+                            <div className="org-avatar">I</div>
+                            <div>
+                                <h3>Indri</h3>
+                                <p>System Analyst</p>
+                            </div>
+                        </div>
+
+                        <div className="org-card">
+                            <div className="org-avatar">P</div>
+                            <div>
+                                <h3>Putri</h3>
+                                <p>Programmer</p>
+                            </div>
+                        </div>
+
+                        <div className="org-card">
+                            <div className="org-avatar">I</div>
+                            <div>
+                                <h3>Ilham</h3>
+                                <p>Programmer</p>
+                            </div>
+                        </div>
+
+                        <div className="org-card">
+                            <div className="org-avatar">R</div>
+                            <div>
+                                <h3>Rafly</h3>
+                                <p>Programmer</p>
+                            </div>
+                        </div>
+
+                        <div className="org-card">
+                            <div className="org-avatar">J</div>
+                            <div>
+                                <h3>Jia</h3>
+                                <p>UI Designer</p>
+                            </div>
+                        </div>
+
+                        <div className="org-card">
+                            <div className="org-avatar">A</div>
+                            <div>
+                                <h3>Alfi</h3>
+                                <p>Illustrator</p>
+                            </div>
+                        </div>
+
+
+                        <div className="org-card">
+                            <div className="org-avatar">R</div>
+                            <div>
+                                <h3>Rony</h3>
+                                <p>Programmer</p>
+                            </div>
+                        </div>
+
+                        <div className="org-card">
+                            <div className="org-avatar">H</div>
+                            <div>
+                                <h3>Hesa</h3>
+                                <p>Designer</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+            <section className="profile-card" data-aos="fade-up">
                 <h3 className="profile-card__title">Lokasi Industri</h3>
                 <div className="profile-map">
                     <iframe
