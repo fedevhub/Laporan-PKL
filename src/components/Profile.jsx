@@ -1,7 +1,7 @@
 import "../styles/Profile.css";
 import fotoSiswa from "../assets/me-optimized.jpg";
 import fotoIndustri from "../assets/image-optimized.jpg";
-
+import logoIndustri from "../assets/3pm.jpg";
 export const PROFILE_SECTION_ID = "profile";
 export const DEFAULT_PROFILE_TAB = "siswa";
 
@@ -100,15 +100,24 @@ function ProfileIndustriTab() {
                         industri ini menyediakan layanan pengembangan aplikasi desktop, web, dan mobile untuk
                         berbagai kebutuhan industri.
                     </p>
-                </section>
-
-                <section className="profile-card profile-card--wide" data-aos="zoom-in" data-aos-duration="600">
+                    <br></br>
                     <h3 className="profile-card__title">Misi Industri</h3>
                     <ul className="profile-list">
                         {MISI_PERUSAHAAN.map((item) => (
                             <li key={item}>{item}</li>
                         ))}
                     </ul>
+                </section>
+                <section className="image-siswa" data-aos="zoom-in" data-aos-duration="600">
+                    <img
+                        src={logoIndustri}
+                        alt="Logo Industri"
+                        className="profile-image-siswa"
+                        width="960"
+                        height="625"
+                        loading="lazy"
+                        decoding="async"
+                    />
                 </section>
             </div>
 

@@ -30,7 +30,7 @@ const BAGI_SEKOLAH = [
 const BAGI_PERUSAHAAN = [
     "Mendapat sudut pandang baru dari siswa.",
     "Membantu pekerjaan sederhana di perusahaan.",
-    "Mendukung dunia pendidikan melalui PKL.",
+    "Mendukung dunia pendidikan melalui siswa PKL dengan mengaplikasikan ilmu yang telah dipelajari di sekolah ke industri.",
     "Mengenalkan budaya kerja kepada siswa.",
     "Membangun hubungan baik dengan sekolah.",
 ];

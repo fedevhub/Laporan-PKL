@@ -5,6 +5,8 @@ import ticat3 from "../assets/ticat3.jpeg";
 import erp1 from "../assets/erp1.jpeg";
 import erp2 from "../assets/erp2.jpeg";
 import erp3 from "../assets/erp3.jpeg";
+import api from "../assets/api.jpeg";
+import swagger from "../assets/swagger.png";
 export const LAPORAN_SECTION_ID = "laporan";
 export const DEFAULT_LAPORAN_TAB = "kompetensi";
 
@@ -148,6 +150,53 @@ function LaporanKompetensiTab() {
                     </div>
                 </section>
             ))}
+
+            <section className="laporan-showcase" data-aos="fade-up">
+                <div className="laporan-showcase__carousel">
+                    <div className="laporan-showcase__slides">
+                        <div className="laporan-showcase__slide">
+                            <img
+                                src={api}
+                                alt="Slide 1"
+                                className="laporan-showcase__image"
+                            />
+                        </div>
+
+                        <div className="laporan-showcase__slide">
+                            <img
+                                src={swagger}
+                                alt="Slide 2"
+                                className="laporan-showcase__image"
+                            />
+                        </div>
+
+                        <div className="laporan-showcase__slide">
+                            <img
+                                src={api}
+                                alt="Slide 3"
+                                className="laporan-showcase__image"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div className="laporan-showcase__content">
+                    <h3 className="laporan-showcase__title">
+                        Integrasi API
+                    </h3>
+
+                    <h4 className="laporan-showcase__subtitle">
+                        ( Application Programming Interface ) 
+                    </h4>
+
+                    <p className="laporan-showcase__description">
+                        Melakukan integrasi API pada aplikasi web menggunakan Angular 
+                        untuk menampilkan, mengelola, dan memproses data dari backend. 
+                        Kegiatan ini meliputi pemanggilan API, pengolahan respons data, 
+                        serta penyesuaian tampilan agar sesuai dengan kebutuhan pengguna. 
+                    </p>
+                </div>
+            </section>
         </div>
     );
 }
