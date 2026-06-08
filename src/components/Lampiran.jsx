@@ -12,6 +12,9 @@ import kantor from "../assets/image.png";
 import bukber from "../assets/bukber.jpeg";
 import api from "../assets/api.jpeg";
 import daftar from "../assets/daftar.jpeg"
+import konsultasi1 from "../assets/konsultasi1.jpeg";
+import konsultasi2 from "../assets/konsultasi2.jpeg";
+import penjemputan from "../assets/penjemputan.jpeg";
 
 
 export const LAMPIRAN_SECTION_ID = "lampiran";
@@ -77,6 +80,21 @@ const LAMPIRAN_ITEMS = [
         text: "Berisi daftar pekerjaan yang dikerjakan selama kegiatan PKL.",
         image: daftar,
     },
+    {
+        title: "Konsultasi Google Site Day 1",
+        text: "Dokumentasi konsultasi pertama dengan tim teknis.",
+        image: konsultasi1,
+    },
+    {
+        title: "Konsultasi Google Site Day 2",
+        text: "Dokumentasi konsultasi kedua dengan tim teknis.",
+        image: konsultasi2,
+    },
+    {
+        title: "Penjemputan PKL di 3PM Solution",
+        text: "Dokumentasi proses penjemputan peserta PKL.",
+        image: penjemputan,
+    }
 ];
 
 export default function Lampiran() {

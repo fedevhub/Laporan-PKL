@@ -8,6 +8,7 @@ export const DEFAULT_PROFILE_TAB = "siswa";
 const BIODATA_SISWA = [
     ["Nama Lengkap", "Fitri Rachmania Harianto"],
     ["Tempat, Tgl Lahir", "Malang, 29 Maret 2008"],
+    ["Alamat", "Perum Pondok Mutiara Blok E2/20 Dengkol, Singosari, Malang"],
     ["Jenis Kelamin", "Perempuan"],
     ["Jurusan", "Rekayasa Perangkat Lunak"],
     ["NIS", "5704/1384.63"],
