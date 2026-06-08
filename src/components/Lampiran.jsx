@@ -82,12 +82,12 @@ const LAMPIRAN_ITEMS = [
     },
     {
         title: "Konsultasi Google Site Day 1",
-        text: "Dokumentasi konsultasi pertama dengan tim teknis.",
+        text: "Dokumentasi konsultasi pertama dengan guru pembimbing.",
         image: konsultasi1,
     },
     {
         title: "Konsultasi Google Site Day 2",
-        text: "Dokumentasi konsultasi kedua dengan tim teknis.",
+        text: "Dokumentasi konsultasi kedua dengan guru pembimbing.",
         image: konsultasi2,
     },
     {
